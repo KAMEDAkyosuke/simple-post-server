@@ -146,6 +146,7 @@ void start_server(int port, void (*post_cb) (post_content_t*))
                     }
                     else{
                         read_socket(cursor->value, post_cb);
+                        // TODO: write HTTP/1.1 200 OK if read success
                         close(cursor->value);
                         intlist_del(socklist, cursor->value);
                     }
