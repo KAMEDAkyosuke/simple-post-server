@@ -17,7 +17,7 @@ simple-post-server
     static void simple_post_server_callback(post_content_t* post_content)
     {
         printf("filename\n%s\n", post_content->filename);
-        printf("content\n: %s\n", post_content->content);
+        printf("content\n%s\n", post_content->content);
     }
 
     int main(int argc, char** argv)
